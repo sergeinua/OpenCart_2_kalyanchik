@@ -1,0 +1,77 @@
+#filterpro .option_box {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#filterpro .ui-widget-header {
+    background: none repeat scroll 0 0 #b31212;
+    border: 0 none;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+
+#filterpro .ui-state-hover, #filterpro .ui-state-focus, #filterpro .ui-state-active {
+    border: 1px solid #ccc;
+    background: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+#filterpro .price_slider {
+    padding: 0;
+}
+
+#filterpro .option_values {
+    padding-top: 5px;
+}
+
+#filterpro .option_name, #filterpro .attribute_group_name {
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+#filterpro .attribute_group_name{
+    padding-left: 0;
+}
+
+#filterpro .hided {
+    background: transparent;
+    cursor: pointer;
+}
+
+#filterpro .clear_filter {
+    display: inline-block;
+    padding-right: 25px;
+    font-size: 16px;
+    text-decoration: underline;
+    vertical-align: middle;
+    cursor: pointer;
+
+}
+
+#filterpro .collapsible{
+    overflow-y: auto;
+}
+#filterpro img {
+    cursor: pointer;
+    margin: 2px
+}
+
+#filterpro img.selected {
+    border: 2px solid;
+    margin: 0;
+}
+#column-left + #column-right + #content .product-grid > div.loadmask {
+    width: 100%;
+}
+
+.ui-slider-handle{
+    border-radius: 50% !important;
+}
+
+.clear_filter{
+
+}

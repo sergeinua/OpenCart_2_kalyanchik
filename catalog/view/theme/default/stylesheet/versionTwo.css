@@ -1,0 +1,20 @@
+/*Product page*/
+button#button-cart {
+	padding: 15px 40px;
+	position: absolute;
+	right: 0;
+	top: 97px;
+}
+
+#oneclick-order { margin: 0 0 40px; }
+
+#oneclick-order .col-md-6:nth-of-type(1) { width: 60%; }
+
+#oneclick-order .col-md-6:nth-of-type(2) { width: 40%; }
+
+#oneclick-order .btn-oneclick-order { background: #50b300; }
+
+#product .form-control { width: 57%; }
+
+/*Home page*/
+

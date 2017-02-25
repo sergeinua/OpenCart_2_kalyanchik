@@ -1,0 +1,96 @@
+.display-none {
+	display: none;
+}
+
+@media (max-width: 767px) {
+	.padding_none {
+		padding: 0;
+	}
+
+	.text-left {
+		text-align: left;
+	}
+}
+
+.manufacturer_description {
+	clear: both;
+}
+
+.manufacturer_description p {
+	margin: 0;
+}
+
+.brands-page #content {
+	margin-left: 5px;
+	padding-right: 25px;
+}
+
+.brands-page .shadow-block {
+	margin-bottom: 10px;
+}
+
+label.control-label {
+	width: 100%;
+	color: #c1ae9f;
+}
+
+.brands-page .product-layout {
+	position: relative;
+}
+
+.brands-page .module-good .caption .price {
+	position: absolute;
+	top: 83%;
+	left: 5px;
+}
+
+.brands-page .button-group {
+	height: 15px;
+}
+
+.brands-page .module-good .good-name {
+	max-height: 100px;
+}
+
+.brands-page .cart-btn {
+	position: absolute;
+	top: 82%;
+	right: 4px;
+}
+
+.brands-page .cart-btn:after {
+	right: -1px;
+}
+
+.brands-page .like-btn {
+	bottom: 130px;
+	left: 40px;
+}
+
+@media (max-width: 769px) {
+	.brands-page #content {
+		margin-left: 0;
+		padding-right: 15px;
+	}
+
+	.brands-page .cart-btn {
+		top: 60%;
+	}
+
+	.brands-page .module-good .caption .price {
+		top: 42%;
+		left: auto;
+		right: 5px;
+	}
+
+	.brands-page .like-btn {
+		bottom: 30px;
+		left: 20px;
+	}
+}
+
+@media (max-width: 760px) {
+	.brands-page .cart-btn {
+		right: 9px;
+	}
+}

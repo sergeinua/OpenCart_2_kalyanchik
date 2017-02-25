@@ -1,0 +1,275 @@
+//mixins for media-rules
+
+.xs(@rules) {
+  @media screen and (min-width: @screen-xs){
+    @rules();
+  }
+}
+
+.max-xs(@rules){
+  @media screen and (max-width: @screen-xs){
+    @rules();
+  }
+}
+
+.xs-sm(@rules){
+  @media (min-width: @screen-xs) and (max-width: @screen-sm){
+    @rules();
+  }
+}
+
+.sm(@rules) {
+  @media screen and (min-width: @screen-sm){
+    @rules();
+  }
+}
+
+.max-sm(@rules){
+  @media screen and (max-width: @screen-sm){
+    @rules();
+  }
+}
+
+.sm-md(@rules){
+  @media (min-width: @screen-sm) and (max-width: @screen-md){
+    @rules();
+  }
+}
+
+
+.md(@rules) {
+  @media screen and (min-width: @screen-md){
+    @rules();
+  }
+}
+
+.max-md(@rules){
+  @media screen and (max-width: @screen-md){
+    @rules();
+  }
+}
+
+.md-lg(@rules){
+  @media (min-width: @screen-md) and (max-width: @screen-lg){
+    @rules();
+  }
+}
+
+.sm-lg(@rules){
+  @media (min-width: @screen-sm) and (max-width: @screen-lg){
+    @rules();
+  }
+}
+.lg(@rules) {
+  @media screen and (min-width: @screen-lg){
+    @rules();
+  }
+}
+
+.max-lg(@rules) {
+  @media screen and (max-width: @screen-lg){
+    @rules();
+  }
+}
+
+//min-height, min-width
+
+.height(@min-height){
+  height: 100%;
+  min-height: ~"@{min-height}px";
+}
+.width(@min-width){
+  width: 100%;
+  min-width: ~"@{min-width}px";
+}
+
+//together
+.min-sizes(@min-height, @min-width){
+  height: 100%;
+  min-height: ~"@{min-height}px";
+  width: 100%;
+  min-width: ~"@{min-width}px";
+}
+
+.sizing(@width, @height){
+  width:~"@{width}px";
+  height:~"@{height}px";
+}
+
+
+//mixins for border
+
+.border-my(@color){
+  border-width: 1px;
+  border-style: solid;
+  border-color: @color;
+}
+
+//mixins for font
+
+.normal(){
+  font-weight: normal;
+}
+
+.bold(){
+  font-weight: bold;
+}
+
+.italic(){
+  font-style: italic;
+}
+
+//
+.size-reset(){
+  margin: 0;
+  padding: 0;
+}
+
+.margin-bottom-none{
+  margin-bottom: 0 !important;
+}
+
+//
+.big-border-radius(){
+  border-radius: @border-radius-my;
+}
+
+//input -> focus animation
+
+.input-form::-webkit-input-placeholder{
+  line-height: 20px;
+  .transition(line-height 0.3s ease-in-out);
+}
+.input-form:focus::-webkit-input-placeholder {
+  line-height: 100px;
+  .transition(line-height 0.3s ease-in-out);
+}
+.input-form::-moz-placeholder{
+  line-height: 20px;
+  .transition(line-height 0.3s ease-in-out);
+}
+.input-form:-moz-placeholder{
+  line-height: 20px;
+  .transition(line-height 0.3s ease-in-out);
+}
+.input-form:focus::-moz-placeholder{
+  line-height: 100px;
+  .transition(line-height 0.3s ease-in-out);
+}
+.input-form:focus:-moz-placeholder{
+  line-height: 100px;
+  .transition(line-height 0.3s ease-in-out);
+}
+.input-form:-ms-input-placeholder{
+  line-height: 20px;
+  .transition(line-height 0.3s ease-in-out);
+}
+.input-form:focus:-ms-input-placeholder{
+  line-height: 100px;
+  .transition(line-height 0.3s ease-in-out);
+}
+
+
+//
+//
+//
+//
+//
+
+.box-shadow-light(){
+  .box-shadow(0 0 5px 0 rgba(0,0,0,0.3));
+}
+.round(@radius:50%){
+  border-radius: @radius;
+}
+
+//
+.round-shadow(){
+  .box-shadow-light;
+  .round;
+}
+
+.usual{
+  padding: 10px;
+  background: @main-color;
+  border-radius: (@border-radius-my / 2);
+  .box-shadow(0 0 5px 0 rgba(0,0,0,0.3));
+}
+
+.shadow-block{
+  background: @main-color;
+  margin-bottom: 30px;
+  padding: 15px 30px;
+  .box-shadow-light;
+  .round(12px);
+  .clearfix;
+}
+
+.title{
+  padding: 10px 10px 15px 10px;
+  font-size: @font-size-big;
+  line-height: @nav-font-size;
+  color: @lighten-color;
+  text-transform: uppercase;
+  .bold;
+
+  .sm({
+    font-size: @font-size-cill;
+  });
+
+}
+
+
+//
+.background-menu(@bg-color, @url, @height){
+  background: @bg-color @url no-repeat;
+  background-position: center ~"@{height}px";
+}
+
+.background-soc(@bg-color, @url, @x, @y){
+  background: @bg-color @url no-repeat;
+  background-position: ~"@{x}px" ~"@{y}px";
+}
+
+//
+.round-dot-footer(){
+  content: "•";
+  color: @lighter-color;
+  font-size: @font-size-cill;
+  line-height: @contact-mob-font-size;
+}
+
+.border-bottom{
+  border-bottom: 1px solid @nav-color;
+}
+
+.relative{
+  position: relative;
+}
+
+.display-none{
+  display: none;
+}
+
+.full-fixed(){
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1100;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.input-orange-border{
+  border: 1px solid @light-color !important;
+}
+.box-sizing (@type: border-box) {
+  box-sizing:         @type;
+}
+.border-radius(@radius){
+  border-radius: @radius;
+}
